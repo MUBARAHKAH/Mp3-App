@@ -1,0 +1,265 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+body{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.main{
+  position: relative;
+  min-height: 80vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #5D6D7E, #4693DBF5);
+}
+.main button{
+  padding: 10px 12px;
+  margin: 0 10px;
+}
+.main #logo{
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 25px;
+  color: #CCC;
+}
+.main #logo i{
+  margin-right: 15px;
+}
+.left{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.left img{
+  height: 300px;
+  width: 80%;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 10px 0px 20px 12px rgba(240, 240, 240, 0.2);
+}
+input[type="range"]{
+  -webkit-appearance: none;
+  width: 50%;
+  outline: none;
+  height: 2px;
+  margin: 0 15px;
+}
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  height: 20px;
+  width: 20px;
+  background: #FF8A65;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.right input[type="range"]{
+  width: 40%;
+}
+.left .volume{
+  margin-top: 25px;
+  width: 80%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.volume input[type="range"]{
+  flex:1;
+}
+.left .volume p{
+  font-weight: bold;
+  font-size: 15px;
+}
+.left .volume i{
+  cursor: pointer;
+  padding: 8px 12px;
+  background: #FF8A65;
+}
+.left .volume i:hover{
+  background: rgba(245, 245, 245, 0.1);
+}
+.volume #volume_show{
+  padding: 8px 12px;
+  margin: 0 5px 0 0;
+  background: rgba(245, 245, 245, 0.1);
+}
+.right{
+  width: 50%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.right .middle{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right .middle button{
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.1);
+}
+.quran_detail{
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  margin-bottom: 6.5em;
+}
+.quran_detail #title{
+  text-transform: capitalize;
+  color: #FFF;
+  font-size: 35px;
+}
+.quran_detail #reciter{
+  text-transform: capitalize;
+  color: #FFF;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.right .duration{
+  margin-top: 3em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+.duration input[type="range"]{
+  flex: 1;
+}
+.right #auto{
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 45px;
+  border: none;
+  padding: 10px 14px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 10px;
+}
+#play{
+  background: #FF8A65;
+}
+.right button:hover{
+  background: #FF8A65;
+}
+.right::before{
+  color: #fff;
+  font-size: 20px;
+}
+.show_quran_no{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.show_quran_no p:nth-child(2){
+  margin: 0 5px;
+}
+/*responsive*/
+@media(max-width:700px){
+  .main{
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+  }
+  .right{
+    margin-top: 50px;
+    width: 60%;
+  }
+  .right .duration{
+    width: 90%;
+  }
+  .left{
+    margin-top: 5em;
+    width: 60%;
+  }
+  .left img{
+    min-width: 90%;
+    height: 180px;
+  }
+  .main #logo{
+    display: none;
+  }
+  .quran_detail{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 80%;
+    height: 70px;
+  }
+  .quran_detail #title{
+    font-size: 1.8em;
+  }
+}
+
+@media(max-width: 500px){
+  .main{
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+  }
+  .right{
+    margin-top: 50px;
+    width: 80%;
+  }
+  .left{
+    margin-top: 5em;
+    width: 80%;
+  }
+  .left img{
+    min-width: 90%;
+    height: 180px;
+  }
+  .main #logo{
+    display: none;
+  }
+  .quran_detail{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 80%;
+    height: 70px;
+  }
+  .quran_detail #title{
+    font-size: 1.5em;
+  }
+  .quran_detail #reciter{
+    font-size: 0.8em;
+  }
+  .right .middle button{
+    height: 62px;
+    width: 62px;
+  }
+}

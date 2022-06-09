@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MP3 Quran Player</title>
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+ <link rel="stylesheet" type="text/css" href="./CSS/style.css">
+</head>
+
+<body>
+<div class="main">
+  <p id="logo"><i class="fa fa-music"></i>MP3 Quran</p>
+
+<!--- left part --->
+<div class="left">
+<!--- Quran img --->
+<img src="./img/quran11.PNG" alt="Quran Image"id="quranPix">
+<div class="volume">
+    <p id="volume_show">50</p>
+    <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+<input type="range"min="0"max="100" value="50" onchange="volume_change()" id="volume">
+</div>
+</div>
+
+<!--- right part --->
+<div class="right">
+  <div class="show_quran_no">
+  <p id="present">1</p>
+  <p>/</p>
+  <p id="total">2</p>
+  </div>
+
+<!--- Quran title & reciter name --->
+<div class="quran_detail">
+  <p id="title">QURAN</p>
+  <p id="reciter">AbdaLlah Humeid</p>
+</div>
+
+<!--- middle part --->
+<div class="middle">
+<button onclick="previous_chapter()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+<button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+<button onclick="next_chapter()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+</div>
+
+<!--- Quran duration part --->
+<div class="duration">
+<input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+</div>
+<button id="auto" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+</div>
+</div>
+
+<!--- Add javascript file --->
+<script src="./JS/script.js"></script>
+
+</body>
+</html>

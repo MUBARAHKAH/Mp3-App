@@ -1,0 +1,12 @@
+<?xml version= '1.0' encoding='UTF-8' ?>
+<widget
+  android-versionCode = '1'
+  id='com.mubarahkah.mp3Quran'
+  version = '1.0.0'
+  xmlns= 'https://www.w3.org/ns/widgets'>
+
+  <name> mp3Quran </name>
+  <description> My project is an app</description>
+  <author> mubarahkah </author>
+  <preference name = 'orientation' value = 'portrait'/>
+  </widget>
